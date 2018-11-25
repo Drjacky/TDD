@@ -12,6 +12,8 @@ class AlbumServiceImpl : AlbumService {
 
     private val albumDao: AlbumDao by lazy {
         AlbumDaoImpl()
+        //AlbumDaoStubImpl()
+
     }
 
     override fun getAlbums(userId: String): Single<List<AlbumDto>> {
