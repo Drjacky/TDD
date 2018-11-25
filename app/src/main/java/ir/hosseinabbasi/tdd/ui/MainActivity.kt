@@ -33,11 +33,13 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("CheckResult")
     fun searchAlbums(view: View) {
-        val search = activityMainBtnSearch.text.toString()
+        val search = activityMainAtcAlbumUserId.text.toString()
 
         albumService.getAlbums(search)
             .applyIoScheduler()
-            .subscribe(adapter::submitList)
+            .subscribe { list ->
+            adapter.submitList(list)
+        }
     }
 
     private fun initViews() {
