@@ -14,5 +14,5 @@ class AlbumServiceImpl : AlbumService {
         AlbumDaoImpl()
     }
 
-    override fun getAlbums(userId: Int): Single<List<AlbumDto>> = albumDao.getAlbums(userId)
+    override fun getAlbums(userId: String): Single<List<AlbumDto>> = albumDao.getAlbums(userId)
 }

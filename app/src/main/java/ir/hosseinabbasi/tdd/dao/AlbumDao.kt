@@ -11,5 +11,5 @@ import retrofit2.http.Query
 interface AlbumDao {
 
     @GET("albums")
-    fun getAlbums(@Query("userId") userId: Int): Single<List<AlbumDto>>
+    fun getAlbums(@Query("userId") userId: String): Single<List<AlbumDto>>
 }

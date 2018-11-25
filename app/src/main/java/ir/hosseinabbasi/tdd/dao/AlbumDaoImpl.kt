@@ -8,7 +8,7 @@ import ir.hosseinabbasi.tdd.dto.AlbumDto
  */
 class AlbumDaoImpl : AlbumDao {
 
-    override fun getAlbums(userId: Int): Single<List<AlbumDto>> {
+    override fun getAlbums(userId: String): Single<List<AlbumDto>> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

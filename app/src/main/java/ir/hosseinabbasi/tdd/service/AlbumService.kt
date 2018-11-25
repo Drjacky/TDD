@@ -9,5 +9,5 @@ import retrofit2.http.Query
  */
 interface AlbumService {
 
-    fun getAlbums(@Query("userId") userId: Int): Single<List<AlbumDto>>
+    fun getAlbums(@Query("userId") userId: String): Single<List<AlbumDto>>
 }

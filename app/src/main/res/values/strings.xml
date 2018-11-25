@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TDD</string>
+    <string name="album_user_id">Album User ID</string>
+    <string name="search">Search</string>
 </resources>
