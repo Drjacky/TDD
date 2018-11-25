@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import ir.hosseinabbasi.mvvm.ui.home.AlbumListAdapter
 import ir.hosseinabbasi.tdd.R
 import ir.hosseinabbasi.tdd.common.applyIoScheduler
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initViews()
     }
 
     @SuppressLint("CheckResult")
@@ -36,5 +38,11 @@ class MainActivity : AppCompatActivity() {
         albumService.getAlbums(search)
             .applyIoScheduler()
             .subscribe(adapter::submitList)
+    }
+
+    private fun initViews() {
+        activityMainRcyMain.layoutManager = LinearLayoutManager(this)
+        activityMainRcyMain.setHasFixedSize(true)
+        activityMainRcyMain.adapter = adapter
     }
 }
