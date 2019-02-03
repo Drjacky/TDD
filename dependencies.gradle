@@ -24,7 +24,7 @@ ext {
     javaxInjectVersion = '1'
     okhttpLoggingVersion = '3.11.0'
     junitVersion = '4.12'
-    mockitoVersion = '2.8.47'
+    mockitoVersion = '2.24.0'
     realmFieldNamesHelperVersion = '1.1.1'
     gsonVersion = '2.8.5'
     constraintLayoutVersion = '1.1.2'
@@ -89,7 +89,7 @@ ext {
             daggerCompiler        : "com.google.dagger:dagger-compiler:$daggerVersion",
             mockitoKotlin         : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion",
             powermockModuleJunit4 : "org.powermock:powermock-module-junit4:$powermockVersion",
-            powermockApiMockito   : "org.powermock:powermock-api-mockito:$powermockVersion"
+            powermockApiMockito   : "org.powermock:powermock-api-mockito2:$powermockVersion"
     ]
 
 }
