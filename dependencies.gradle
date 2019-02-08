@@ -8,7 +8,7 @@ ext {
     testInstrumentationRunner = "android.support.test.runner.AndroidJUnitRunner"
     // Libraries
     ankoVersion = '0.10.4'
-    retrofit2Version = '2.4.0'
+    retrofit2Version = '2.5.0'
     butterknifeVersion = '8.8.1'
     picassoVersion = '2.71828'
     supportVersion = '1.0.0-rc02'//'
@@ -35,6 +35,7 @@ ext {
     mockitoCoreVersion = '2.21.0'
     navigationVersion = '1.0.0-alpha06'
     paginateVersion = '0.5.1'
+    mockWebServer = '3.12.1'
     // Presentation
     presentationDependencies = [
             kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion",
@@ -89,7 +90,8 @@ ext {
             daggerCompiler        : "com.google.dagger:dagger-compiler:$daggerVersion",
             mockitoKotlin         : "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion",
             powermockModuleJunit4 : "org.powermock:powermock-module-junit4:$powermockVersion",
-            powermockApiMockito   : "org.powermock:powermock-api-mockito2:$powermockVersion"
+            powermockApiMockito   : "org.powermock:powermock-api-mockito2:$powermockVersion",
+            mockWebServer         : "com.squareup.okhttp3:mockwebserver:$mockWebServer"
     ]
 
 }

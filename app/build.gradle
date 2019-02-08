@@ -18,6 +18,7 @@ android {
         versionName rootProject.ext.versionName
         testInstrumentationRunner rootProject.ext.testInstrumentationRunner
     }
+    //testBuildType "staging"
     buildTypes {
         release {
             minifyEnabled true
@@ -34,6 +35,10 @@ android {
             signingConfig android.signingConfigs.debug
             buildConfigField("String", "BASE_URL", "\"https://jsonplaceholder.typicode.com\"")
         }
+        /*staging {
+            initWith(buildTypes.debug)
+            buildConfigField("String", "BASE_URL", "\"/\"")
+        }*/
     }
     compileOptions {
         targetCompatibility 1.8
@@ -111,6 +116,7 @@ dependencies {
     testImplementation presentationTestDependencies.mockitoKotlin
     testImplementation presentationTestDependencies.powermockModuleJunit4
     testImplementation presentationTestDependencies.powermockApiMockito
+    testImplementation presentationTestDependencies.mockWebServer
 }
 repositories {
     mavenCentral()
